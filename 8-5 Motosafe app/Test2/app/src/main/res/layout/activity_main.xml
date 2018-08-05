@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="203dp"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:text="enter text to send" />
+
+    <Button
+        android:id="@+id/locationBTN"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="See Updated Location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <EditText
+        android:id="@+id/latTXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Latitude"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/longTXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Longitude"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/rText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="140dp"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:text="Locations Marked" />
+
+    <Button
+        android:id="@+id/btnONOFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="22dp"
+        android:text="ON/OFF" />
+
+    <Button
+        android:id="@+id/btnDiscoverable_on_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnONOFF"
+        android:layout_below="@+id/btnONOFF"
+        android:text="enable discoverable" />
+
+    <Button
+        android:id="@+id/btnFindUnpairedDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDiscoverable_on_off"
+        android:layout_toStartOf="@+id/locationBTN"
+        android:onClick="btnDiscover"
+        android:text="Discover" />
+
+    <ListView
+        android:id="@+id/lvNewDevices"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_above="@+id/lvNewDevices"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="39dp"
+        android:text="send" />
+
+    <Button
+        android:id="@+id/btnStartConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/locationBTN"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/incomingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/latTXT"
+        android:layout_toStartOf="@+id/latTXT"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/longTXT"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+</RelativeLayout>
